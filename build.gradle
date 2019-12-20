@@ -1,0 +1,44 @@
+
+// 프로젝트의 플러그인 의존성 관리를 위한 설정
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+// 플러그인 의존성 적용(자바와 스프링부트 사용)
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+////////////////////////////////////////////
+// 이하, Gradle 기반 자바 프로젝트 설정
+//plugins {
+//    id 'java'
+//}
+
+group 'com.follow.book'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
