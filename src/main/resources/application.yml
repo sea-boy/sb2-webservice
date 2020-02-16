@@ -15,4 +15,4 @@ spring:
     store-type: jdbc
 
 server:
-  port: 5999
+  port: 8080
