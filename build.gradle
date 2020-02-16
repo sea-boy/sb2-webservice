@@ -44,6 +44,7 @@ dependencies {
     compile group: 'org.springframework.session', name: 'spring-session-jdbc'
     compile group: 'com.h2database', name: 'h2'
     compile group: 'org.projectlombok', name: 'lombok'
+    compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
     annotationProcessor('org.projectlombok:lombok')
 
 
